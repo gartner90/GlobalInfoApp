@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>GlobalInfo</title>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script>
+		var heightWindow = $(window).height();
+		
+		setTimeout(function(){ 
+			$('.iframeWeb').height(heightWindow);
+		}, 300);
+
+		$( window ).resize(function() {
+			var heightWindow = $(window).height();
+			$('.iframeWeb').height(heightWindow);
+			console.log(heightWindow);
+		});
+	</script>
+</head>
+<body style="padding:0;margin:0;">
+	<iframe src="http://globalinfopro.com/" style="width:100%;" class="iframeWeb"></iframe>
+</body>
+</html>
